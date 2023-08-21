@@ -2,9 +2,290 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Просто банк | Когда Банк Максимально Понятен</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-
+<header>
+    <nav class="nav">
+        <img src="images/logo.png" alt="Лого просто Банк" class="nav__logo" id="logo">
+        <div class="nav__text">Просто Банк</div>
+        <ul class="nav__links">
+            <li class="nav_item">
+                <a href="#section1" class="nav__link">Услуги</a>
+            </li>
+            <li class="nav_item">
+                <a href="#section2" class="nav__link">Операции</a>
+            </li>
+            <li class="nav_item">
+                <a href="#section3" class="nav__link">Отзывы</a>
+            </li>
+            <li class="nav_item">
+                <a href="#" class="nav__link nav__link--btn btn--show-modal-window">Открыть счёт</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="header__title">
+        <h1>
+            Когда
+            <span class="highligt"> банк</span>
+            максимально
+            <br>
+            <span class="highlight">понятен</span>
+        </h1>
+        <h3>
+            Более простоной банковкий опят для упрлщения жизни.
+        </h3>
+        <button class="btn--text btn--scroll-to">
+            Узнать больше
+        </button>
+    </div>
+</header>
+<section class="section" id="section1">
+    <div class="section__title">
+        <h2 class="section__description">
+            Услуги
+        </h2>
+        <h3 class="section__header">
+            Все необходимое в современном банке.
+        </h3>
+    </div>
+    <div class="services__feature">
+        <img src="images/stock-exchange-lazy.jpg" alt="Числа на экране" class="services__img lazy-img">
+        <div class="services__icon">
+            <svg>
+                <use xlink:href="images/icons.svg#icon-monitor"></use>
+            </svg>
+        </div>
+        <h5 class="service__header">
+            100% цифровой банк
+        </h5>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et feugiat orci. Integer ut mauris nec sapien
+            viverra condimentum sed at eros. Donec vitae odio non mauris convallis congue. Quisque id rhoncus elit. Nam
+            accumsan facilisis felis.
+        </p>
+    </div>
+    <div class="services__feature">
+        <div class="services__icon">
+            <svg>
+                <use xlink:href="images/icons.svg#icon-trending-up"></use>
+            </svg>
+        </div>
+        <h5 class="service__header">
+            Наблюдай за ростом своих денег
+        </h5>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et feugiat orci. Integer ut mauris nec sapien
+            viverra condimentum sed at eros. Donec vitae odio non mauris convallis congue. Quisque id rhoncus elit. Nam
+            accumsan facilisis felis.
+        </p>
+    </div>
+    <img src="images/business-lazy.jpg" alt="Возрастающий тренд на графике" class="services__img lazy-img">
+    <img src="images/payment-lazy.jpg" alt="Кредитная карта" class="services__img lazy-img">
+    <div class="services__feature">
+        <div class="services__icon">
+            <svg>
+                <use xlink:href="images/icons.svg#icon-credit-card"></use>
+            </svg>
+        </div>
+        <h5 class="service__header">
+            Бесплатная дебютовая карта велючена
+        </h5>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et feugiat orci. Integer ut mauris nec sapien
+            viverra condimentum sed at eros. Donec vitae odio non mauris convallis congue. Quisque id rhoncus elit. Nam
+            accumsan facilisis felis.
+        </p>
+    </div>
+</section>
+<section class="section" id="section2">
+    <div class="section__title">
+        <h2 class="section__description">
+            Операции
+        </h2>
+        <h3 class="section__header">
+            Все максимально просто, но не прощею
+        </h3>
+    </div>
+    <div class="operations">
+        <div class="operation__tab-container">
+            <button class="btn operations__tab operations__tab--1 operations__tab--active">
+                Мгновенные Переводы
+            </button>
+            <button class="btn operations__tab operations__tab--2">
+                Мгновенное Займы
+            </button>
+            <button class="btn operations__tab operations__tab--3">
+                Мгновенное Закрытие
+            </button>
+        </div>
+        <div class="operations__content operations__content--1 operations__content--active">
+            <div class="operations__icon operations__icon--1">
+                <svg>
+                    <use xlink:href="images/icons.svg#icon-upload"></use>
+                </svg>
+            </div>
+            <h5 class="operations__header">Мгновенно переводите деньги куда угодно и кому угодно!</h5>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et feugiat orci. Integer ut mauris nec
+                sapien viverra condimentum sed at eros. Donec vitae odio non mauris convallis congue. Quisque id rhoncus
+                elit. Nam accumsan facilisis felis.
+            </p>
+        </div>
+        <div class="operations__content operations__content--2">
+            <div class="operations__icon operations__icon--2">
+                <svg>
+                    <use xlink:href="images/icons.svg#icon-home"></use>
+                </svg>
+            </div>
+            <h5 class="operations__header">Купите дом или воплотите свои мечты в реальность с помощью мгновенных
+                кредитов.</h5>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et feugiat orci. Integer ut mauris nec
+                sapien viverra condimentum sed at eros. Donec vitae odio non mauris convallis congue. Quisque id rhoncus
+                elit. Nam accumsan facilisis felis.
+            </p>
+        </div>
+        <div class="operations__content operations__content--3 operations__content--active">
+            <div class="operations__icon operations__icon--3">
+                <svg>
+                    <use xlink:href="images/icons.svg#icon-user"></use>
+                </svg>
+            </div>
+            <h5 class="operations__header">Ваша учетная запись больше не нужна? Без проблем! Мгновенно закройте её.</h5>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et feugiat orci. Integer ut mauris nec
+                sapien viverra condimentum sed at eros. Donec vitae odio non mauris convallis congue. Quisque id rhoncus
+                elit. Nam accumsan facilisis felis.
+            </p>
+        </div>
+    </div>
+</section>
+<section class="section" id="section3">
+    <div class="section__title">
+        <h2 class="section__description">
+            Всё ёще не уверены?
+        </h2>
+        <h3 class="section__header">
+            Миллионы пользователей уже упрощают себе жизнь.
+        </h3>
+    </div>
+    <div class="slider">
+        <div class="slide--1">
+            <div class="review">
+                <h5 class="review__header">
+                    Лучшие финанасовое решение!
+                </h5>
+                <blockquote class="review__text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et feugiat orci. Integer ut mauris
+                    nec sapien viverra condimentum sed at eros. Donec vitae odio non mauris convallis congue. Quisque id
+                    rhoncus elit. Nam accumsan facilisis felis.
+                </blockquote>
+                <address class="review__author">
+                    <img src="images/user-1.png" alt="Фото пользователя" class="review__photo">
+                    <h6 class="review__name">Александра Мищенко</h6>
+                    <p class="review__location">Киев, Украина</p>
+                </address>
+            </div>
+        </div>
+        <div class="slide--2">
+            <div class="review">
+                <h5 class="review__header">
+                    Последний шаг, чтобы полностью контролировать сои финансы
+                </h5>
+                <blockquote class="review__text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et feugiat orci. Integer ut mauris
+                    nec sapien viverra condimentum sed at eros. Donec vitae odio non mauris convallis congue. Quisque id
+                    rhoncus elit. Nam accumsan facilisis felis.
+                </blockquote>
+                <address class="review__author">
+                    <img src="images/user-2.png" alt="Фото пользователя" class="review__photo">
+                    <h6 class="review__name">Дмитрий Ющенко</h6>
+                    <p class="review__location">Львов, Украина</p>
+                </address>
+            </div>
+        </div>
+        <div class="slide--3">
+            <div class="review">
+                <h5 class="review__header">
+                    Наконец-то свободен от высоких процентов на ипотеку в другом банке
+                </h5>
+                <blockquote class="review__text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et feugiat orci. Integer ut mauris
+                    nec sapien viverra condimentum sed at eros. Donec vitae odio non mauris convallis congue. Quisque id
+                    rhoncus elit. Nam accumsan facilisis felis.
+                </blockquote>
+                <address class="review__author">
+                    <img src="images/user-3.png" alt="Фото пользователя" class="review__photo">
+                    <h6 class="review__name">Владимир Зеленко</h6>
+                    <p class="review__location">Ивано-Франковск, Украина</p>
+                </address>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section__sign-up">
+    <div class="section__title">
+        <h3 class="section__header">
+            Сейчас лучшее время стать клиентом нашего банка!
+        </h3>
+    </div>
+    <button class="btn btn--show-modal-window">Откройте счёт сегодня!</button>
+</section>
+<footer class="footer">
+    <ul class="footer__nav">
+        <li class="footer__item">
+            <a class="footer__link" href="#">О Нас</a>
+        </li>
+        <li class="footer__item">
+            <a class="footer__link" href="#">Расценки</a>
+        </li>
+        <li class="footer__item">
+            <a class="footer__link" href="#">Правила Использования</a>
+        </li>
+        <li class="footer__item">
+            <a class="footer__link" href="#">Политика конфиденциальности</a>
+        </li>
+        <li class="footer__item">
+            <a class="footer__link" href="#">Карьера</a>
+        </li>
+        <li class="footer__item">
+            <a class="footer__link" href="#">Блог</a>
+        </li>
+        <li class="footer__item">
+            <a class="footer__link" href="#">Свяжитесь с нами</a>
+        </li>
+    </ul>
+    <img src="images/logo.png" class="footer__logo" alt="Логотип банка">
+    <p class="footer__copyright">
+        НЕ ТЕРЯЙ ВРЕМЯ И СТРОЙ СВОЕ БУДУЩЕЕ СЕЙЧАС
+    </p>
+    <p class="footer__copyright">
+        © <a class="footer__link" href="https://aly0na27.github.io/">Alyona Kravchenko</a>.
+    </p>
+</footer>
+<div class="modal-window hidden">
+    <button class="btn--close-modal-window">×</button>
+    <h2 class="modal__header">
+        Откройте банковский счёт<br>
+        за
+        <span class="highlight">5 минут</span>
+    </h2>
+    <form class="modal__form">
+        <label>Имя
+            <input type="text">
+        </label>
+        <label>Фамилия
+            <input type="text">
+        </label>
+        <label>Email
+            <input type="email">
+        </label>
+        <button class="btn">Далее →</button>
+    </form>
+</div>
+<div class="overlay hidden"></div>
+<script src="script.js"></script>
 </body>
 </html>
