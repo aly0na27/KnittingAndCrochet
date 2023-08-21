@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Просто банк | Когда Банк Максимально Понятен</title>
+    <link rel="shortcut icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:300,400,500,600&display=swap">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<header>
+<header class="header">
     <nav class="nav">
-        <img src="images/logo.png" alt="Лого просто Банк" class="nav__logo" id="logo">
+        <img src="images/logo2.png" alt="Лого просто Банк" class="nav__logo" id="logo">
         <div class="nav__text">Просто Банк</div>
         <ul class="nav__links">
             <li class="nav_item">
@@ -28,17 +30,18 @@
     <div class="header__title">
         <h1>
             Когда
-            <span class="highligt"> банк</span>
+            <span class="highlight"> банк</span>
             максимально
             <br>
             <span class="highlight">понятен</span>
         </h1>
-        <h3>
-            Более простоной банковкий опят для упрлщения жизни.
-        </h3>
+        <h4>
+            Более простоной банковкий опыт для упрощения жизни.
+        </h4>
         <button class="btn--text btn--scroll-to">
-            Узнать больше
+            Узнать больше ↓
         </button>
+        <img src="images/bank.png" class="header__img" alt="Изображение Банка">
     </div>
 </header>
 <section class="section" id="section1">
@@ -50,53 +53,61 @@
             Все необходимое в современном банке.
         </h3>
     </div>
-    <div class="services__feature">
+    <div class="services">
         <img src="images/stock-exchange-lazy.jpg" alt="Числа на экране" class="services__img lazy-img">
-        <div class="services__icon">
-            <svg>
-                <use xlink:href="images/icons.svg#icon-monitor"></use>
-            </svg>
+        <div class="services__feature">
+            <div class="services__icon">
+                <svg>
+                    <use xlink:href="images/icons.svg#icon-monitor"></use>
+                </svg>
+            </div>
+            <h5 class="service__header">
+                100% цифровой банк
+            </h5>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et feugiat orci. Integer ut mauris nec
+                sapien
+                viverra condimentum sed at eros. Donec vitae odio non mauris convallis congue. Quisque id rhoncus elit.
+                Nam
+                accumsan facilisis felis.
+            </p>
         </div>
-        <h5 class="service__header">
-            100% цифровой банк
-        </h5>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et feugiat orci. Integer ut mauris nec sapien
-            viverra condimentum sed at eros. Donec vitae odio non mauris convallis congue. Quisque id rhoncus elit. Nam
-            accumsan facilisis felis.
-        </p>
-    </div>
-    <div class="services__feature">
-        <div class="services__icon">
-            <svg>
-                <use xlink:href="images/icons.svg#icon-trending-up"></use>
-            </svg>
+        <div class="services__feature">
+            <div class="services__icon">
+                <svg>
+                    <use xlink:href="images/icons.svg#icon-trending-up"></use>
+                </svg>
+            </div>
+            <h5 class="service__header">
+                Наблюдай за ростом своих денег
+            </h5>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et feugiat orci. Integer ut mauris nec
+                sapien
+                viverra condimentum sed at eros. Donec vitae odio non mauris convallis congue. Quisque id rhoncus elit.
+                Nam
+                accumsan facilisis felis.
+            </p>
         </div>
-        <h5 class="service__header">
-            Наблюдай за ростом своих денег
-        </h5>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et feugiat orci. Integer ut mauris nec sapien
-            viverra condimentum sed at eros. Donec vitae odio non mauris convallis congue. Quisque id rhoncus elit. Nam
-            accumsan facilisis felis.
-        </p>
-    </div>
-    <img src="images/business-lazy.jpg" alt="Возрастающий тренд на графике" class="services__img lazy-img">
-    <img src="images/payment-lazy.jpg" alt="Кредитная карта" class="services__img lazy-img">
-    <div class="services__feature">
-        <div class="services__icon">
-            <svg>
-                <use xlink:href="images/icons.svg#icon-credit-card"></use>
-            </svg>
+        <img src="images/business-lazy.jpg" alt="Возрастающий тренд на графике" class="services__img lazy-img">
+        <img src="images/payment-lazy.jpg" alt="Кредитная карта" class="services__img lazy-img">
+        <div class="services__feature">
+            <div class="services__icon">
+                <svg>
+                    <use xlink:href="images/icons.svg#icon-credit-card"></use>
+                </svg>
+            </div>
+            <h5 class="service__header">
+                Бесплатная дебютовая карта велючена
+            </h5>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et feugiat orci. Integer ut mauris nec
+                sapien
+                viverra condimentum sed at eros. Donec vitae odio non mauris convallis congue. Quisque id rhoncus elit.
+                Nam
+                accumsan facilisis felis.
+            </p>
         </div>
-        <h5 class="service__header">
-            Бесплатная дебютовая карта велючена
-        </h5>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et feugiat orci. Integer ut mauris nec sapien
-            viverra condimentum sed at eros. Donec vitae odio non mauris convallis congue. Quisque id rhoncus elit. Nam
-            accumsan facilisis felis.
-        </p>
     </div>
 </section>
 <section class="section" id="section2">
