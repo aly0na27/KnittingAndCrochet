@@ -149,3 +149,13 @@ const lazyImagesObserver = new IntersectionObserver(loadImages, {
 });
 
 lazyImages.forEach(image => lazyImagesObserver.observe(image));
+
+const iconMenu = document.querySelector(".menu__icon");
+const menuBody = document.querySelector(".nav__links");
+
+iconMenu.addEventListener("click", function (e) {
+    document.body.classList.toggle("lock");
+    iconMenu.classList.toggle('active');
+    menuBody.classList.toggle('active');
+
+})
