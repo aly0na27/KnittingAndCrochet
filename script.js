@@ -6,6 +6,7 @@ const btnOperationsTab = document.querySelectorAll(".operations__tab");
 const tabContainer = document.querySelector(".operation__tab-container");
 const operationsContent = document.querySelectorAll(".operations__content");
 const nav = document.querySelector(".nav");
+const logoText = document.querySelector(".nav__text");
 
 for (let i = 0; i < btnShowModalWindow.length; i++) {
     btnShowModalWindow[i].addEventListener("click", () => {
@@ -45,6 +46,11 @@ document.querySelector(".nav__links").addEventListener('click', function (e) {
     }
 });
 
+logoText.addEventListener("click", function(e) {
+    let href = e.target.getAttribute("href");
+    e.preventDefault();
+    document.querySelector(href).scrollIntoView({behavior: "smooth"});
+});
 tabContainer.addEventListener("click", function (e) {
     let activeButton = e.target.closest(".operations__tab");
     console.log(activeButton);
@@ -106,12 +112,14 @@ const observer = new IntersectionObserver(getStickyNav, {
     root: null,
     threshold: 0,
     rootMargin: `-${navHeight}px`,
+    // rootMargin: "-300px"
 });
 observer.observe(header);
 
 const allSections = document.querySelectorAll(".section");
 const appearanceSection = function (entries, observer) {
     const entry = entries[0];
+    console.log(entry);
     if (entry.isIntersecting) {
         entry.target.classList.remove("section--hidden");
         observer.unobserve(entry.target)
