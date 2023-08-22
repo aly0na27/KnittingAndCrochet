@@ -44,7 +44,7 @@
         <img src="images/bank.png" class="header__img" alt="Изображение Банка">
     </div>
 </header>
-<section class="section" id="section1">
+<section class="section section--hidden" id="section1">
     <div class="section__title">
         <h2 class="section__description">
             Услуги
@@ -54,7 +54,7 @@
         </h3>
     </div>
     <div class="services">
-        <img src="images/stock-exchange-lazy.jpg" alt="Числа на экране" class="services__img lazy-img">
+        <img src="images/stock-exchange-lazy.jpg" data-src="images/stock-exchange.jpg" alt="Числа на экране" class="services__img lazy-img">
         <div class="services__feature">
             <div class="services__icon">
                 <svg>
@@ -89,8 +89,8 @@
                 accumsan facilisis felis.
             </p>
         </div>
-        <img src="images/business-lazy.jpg" alt="Возрастающий тренд на графике" class="services__img lazy-img">
-        <img src="images/payment-lazy.jpg" alt="Кредитная карта" class="services__img lazy-img">
+        <img src="images/business-lazy.jpg" data-src="images/business.jpg" alt="Возрастающий тренд на графике" class="services__img lazy-img">
+        <img src="images/payment-lazy.jpg" data-src="images/payment.jpg" alt="Кредитная карта" class="services__img lazy-img">
         <div class="services__feature">
             <div class="services__icon">
                 <svg>
@@ -110,34 +110,34 @@
         </div>
     </div>
 </section>
-<section class="section" id="section2">
+<section class="section section--hidden" id="section2">
     <div class="section__title">
         <h2 class="section__description">
             Операции
         </h2>
         <h3 class="section__header">
-            Все максимально просто, но не прощею
+            Все максимально просто, но не проще.
         </h3>
     </div>
     <div class="operations">
         <div class="operation__tab-container">
-            <button class="btn operations__tab operations__tab--1 operations__tab--active">
+            <button class="btn operations__tab operations__tab--1 operations__tab--active" data-tab="1">
                 Мгновенные Переводы
             </button>
-            <button class="btn operations__tab operations__tab--2">
+            <button class="btn operations__tab operations__tab--2" data-tab="2">
                 Мгновенное Займы
             </button>
-            <button class="btn operations__tab operations__tab--3">
+            <button class="btn operations__tab operations__tab--3" data-tab="3">
                 Мгновенное Закрытие
             </button>
         </div>
-        <div class="operations__content operations__content--1 operations__content--active">
+        <div class="operations__content operations__content--1 operations__content--active" data-tab="1">
             <div class="operations__icon operations__icon--1">
                 <svg>
                     <use xlink:href="images/icons.svg#icon-upload"></use>
                 </svg>
             </div>
-            <h5 class="operations__header">Мгновенно переводите деньги куда угодно и кому угодно!</h5>
+            <h5 class="operations__header">Мгновенно переводите деньги кому угодно!</h5>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et feugiat orci. Integer ut mauris nec
                 sapien viverra condimentum sed at eros. Donec vitae odio non mauris convallis congue. Quisque id rhoncus
@@ -173,7 +173,7 @@
         </div>
     </div>
 </section>
-<section class="section" id="section3">
+<section class="section section--hidden" id="section3">
     <div class="section__title">
         <h2 class="section__description">
             Всё ёще не уверены?
@@ -183,7 +183,7 @@
         </h3>
     </div>
     <div class="slider">
-        <div class="slide--1">
+        <div class="slide slide--1">
             <div class="review">
                 <h5 class="review__header">
                     Лучшие финанасовое решение!
@@ -200,7 +200,7 @@
                 </address>
             </div>
         </div>
-        <div class="slide--2">
+        <div class="slide slide--2">
             <div class="review">
                 <h5 class="review__header">
                     Последний шаг, чтобы полностью контролировать сои финансы
@@ -217,7 +217,7 @@
                 </address>
             </div>
         </div>
-        <div class="slide--3">
+        <div class="slide slide--3">
             <div class="review">
                 <h5 class="review__header">
                     Наконец-то свободен от высоких процентов на ипотеку в другом банке
@@ -234,11 +234,14 @@
                 </address>
             </div>
         </div>
+        <button class="slider__btn slider__btn--left">←</button>
+        <button class="slider__btn slider__btn--right">→</button>
+        <div class="dots"></div>
     </div>
 </section>
-<section class="section__sign-up">
-    <div class="section__title">
-        <h3 class="section__header">
+<section class="section section__sign-up section--hidden">
+    <div class="section__title__sign-up">
+        <h3 class="section__header__sign-up">
             Сейчас лучшее время стать клиентом нашего банка!
         </h3>
     </div>
@@ -268,12 +271,12 @@
             <a class="footer__link" href="#">Свяжитесь с нами</a>
         </li>
     </ul>
-    <img src="images/logo.png" class="footer__logo" alt="Логотип банка">
+<!--    <img src="images/logo.png" class="footer__logo" alt="Логотип банка">-->
     <p class="footer__copyright">
         НЕ ТЕРЯЙ ВРЕМЯ И СТРОЙ СВОЕ БУДУЩЕЕ СЕЙЧАС
     </p>
     <p class="footer__copyright">
-        © <a class="footer__link" href="https://aly0na27.github.io/">Alyona Kravchenko</a>.
+        © <a class="footer__link footer__link-alyona" href="https://aly0na27.github.io/">Alyona Kravchenko</a>.
     </p>
 </footer>
 <div class="modal-window hidden">
@@ -284,15 +287,13 @@
         <span class="highlight">5 минут</span>
     </h2>
     <form class="modal__form">
-        <label>Имя
+        <p>Имя</p>
             <input type="text">
-        </label>
-        <label>Фамилия
+        <p>Фамилия</p>
             <input type="text">
-        </label>
-        <label>Email
+
+        <p>Email</p>
             <input type="email">
-        </label>
         <button class="btn">Далее →</button>
     </form>
 </div>
