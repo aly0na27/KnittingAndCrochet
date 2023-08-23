@@ -561,8 +561,8 @@ img {
 
 .slider {
     position: relative;
-    height: 50rem;
-    max-width: 70rem;
+    height: 60rem;
+    max-width: 80rem;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -587,10 +587,10 @@ img {
 
 .slider__btn {
     position: absolute;
-    top: 50%;
+    top: 40%;
     z-index: 10;
     border: none;
-    background: #9ebd8b;
+    background: #C8D7B8;
     font-family: inherit;
     color: #333;
     border-radius: 50%;
@@ -711,7 +711,7 @@ img {
 .footer__item {
     position: relative;
     margin: 4rem 1rem;
-    background-color: #9ebd8b;
+    background-color: #C8D7B8;
     width: 3rem;
     border-radius: 5rem;
 }
