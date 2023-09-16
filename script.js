@@ -30,12 +30,12 @@ document.addEventListener("keydown", function (e) {
 btnScrollTo.addEventListener("click", function () {
     const section1Coords = section1.getBoundingClientRect();
     console.log(section1Coords);
-    // window.scrollTo({
-    //     left: section1Coords.left + window.pageXOffset,
-    //     top: section1Coords.top + window.pageYOffset,
-    //     behavior: 'smooth'
-    // });
-    section1.scrollIntoView({behavior: 'smooth'});
+    window.scrollTo({
+        left: section1Coords.left + window.pageXOffset,
+        top: section1Coords.top + window.pageYOffset,
+        behavior: 'smooth'
+    });
+    // section1.scrollIntoView({behavior: 'smooth'});
 });
 
 document.querySelector(".nav__links").addEventListener('click', function (e) {
@@ -43,6 +43,11 @@ document.querySelector(".nav__links").addEventListener('click', function (e) {
         e.preventDefault();
         let href = e.target.getAttribute('href');
         document.querySelector(href).scrollIntoView({behavior: "smooth"});
+        if (document.querySelector(".menu__icon").classList.contains("active")) {
+            document.body.classList.remove("lock");
+            iconMenu.classList.remove('active');
+            menuBody.classList.remove('active');
+        }
     }
 });
 
@@ -100,6 +105,7 @@ nav.addEventListener("mouseout", function (e) {
 // });
 const header = document.querySelector(".header");
 const navHeight = nav.getBoundingClientRect().height;
+console.log(nav.getBoundingClientRect());
 const getStickyNav = function (entries) {
     const entry = entries[0];
     if (!entry.isIntersecting) {
@@ -121,6 +127,7 @@ const appearanceSection = function (entries, observer) {
     const entry = entries[0];
     console.log(entry);
     if (entry.isIntersecting) {
+        console.log(entry.isIntersecting);
         entry.target.classList.remove("section--hidden");
         observer.unobserve(entry.target)
     }
@@ -128,7 +135,7 @@ const appearanceSection = function (entries, observer) {
 
 const sectionObserver = new IntersectionObserver(appearanceSection, {
     root: null,
-    threshold: 0.2,
+    threshold: 0.1,
 });
 
 allSections.forEach(function (section) {
@@ -165,10 +172,12 @@ iconMenu.addEventListener("click", function (e) {
     document.body.classList.toggle("lock");
     iconMenu.classList.toggle('active');
     menuBody.classList.toggle('active');
-
 });
 
-//
+
+
+
+//slider
 const slides = document.querySelectorAll('.slide');
 const btnLeft = document.querySelector('.slider__btn--left');
 const btnRight = document.querySelector('.slider__btn--right');
@@ -176,10 +185,6 @@ const dotContainer = document.querySelector('.dots');
 
 let currentSlide = 0;
 const slidesNumber = slides.length;
-
-// const slider = document.querySelector('.slider');
-// slider.style.transform = 'scale(0.4) translateX(1300px)';
-// slider.style.overflow = 'visible';
 
 const createDots = function () {
     slides.forEach(function (_, index) {
@@ -217,9 +222,7 @@ const nextSlide = function () {
     } else {
         currentSlide++;
     }
-
     moveToSlide(currentSlide);
-    // 1 - -100%, 2 - 0%, 3 - 100%, 4 - 200%)
     activateCurrentDot(currentSlide);
 };
 
@@ -229,9 +232,7 @@ const previousSlide = function () {
     } else {
         currentSlide--;
     }
-
     moveToSlide(currentSlide);
-    // 1 - -100%, 2 - 0%, 3 - 100%, 4 - 200%)
     activateCurrentDot(currentSlide);
 };
 
