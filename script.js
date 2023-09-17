@@ -9,7 +9,8 @@ const nav = document.querySelector(".nav");
 const logoText = document.querySelector(".nav__text");
 const header = document.querySelector(".header");
 const navHeight = nav.getBoundingClientRect().height;
-
+const allSections = document.querySelectorAll(".section");
+const lazyImages = document.querySelectorAll("img[data-src]");
 
 // Modal Window
 
@@ -43,7 +44,7 @@ btnScrollTo.addEventListener("click", function () {
 });
 
 
-// NavBar for mobile
+// Smooth behavior navBar's item
 
 document.querySelector(".nav__links").addEventListener('click', function (e) {
     if (e.target.classList.contains("nav__link")) {
@@ -57,8 +58,6 @@ document.querySelector(".nav__links").addEventListener('click', function (e) {
         }
     }
 });
-
-// Smooth behavior of navbar's item
 
 logoText.addEventListener("click", function (e) {
     let href = e.target.getAttribute("href");
@@ -116,14 +115,18 @@ const getStickyNav = function (entries) {
         nav.classList.remove("sticky");
     }
 }
+
+//Scroll
+
 const observer = new IntersectionObserver(getStickyNav, {
     root: null,
     threshold: 0,
     rootMargin: `-${navHeight}px`,
 });
+
 observer.observe(header);
 
-const allSections = document.querySelectorAll(".section");
+
 const appearanceSection = function (entries, observer) {
     const entry = entries[0];
     console.log(entry);
@@ -144,7 +147,7 @@ allSections.forEach(function (section) {
     section.classList.add('section--hidden');
 });
 
-const lazyImages = document.querySelectorAll("img[data-src]");
+// Lazy loading
 
 const loadImages = function (entries, observer) {
     const entry = entries[0];
@@ -166,6 +169,8 @@ const lazyImagesObserver = new IntersectionObserver(loadImages, {
 
 lazyImages.forEach(image => lazyImagesObserver.observe(image));
 
+//NavBar for mobile
+
 const iconMenu = document.querySelector(".menu__icon");
 const menuBody = document.querySelector(".nav__links");
 
@@ -175,15 +180,12 @@ iconMenu.addEventListener("click", function (e) {
     menuBody.classList.toggle('active');
 });
 
+// Slider
 
-
-
-//slider
 const slides = document.querySelectorAll('.slide');
 const btnLeft = document.querySelector('.slider__btn--left');
 const btnRight = document.querySelector('.slider__btn--right');
 const dotContainer = document.querySelector('.dots');
-
 let currentSlide = 0;
 const slidesNumber = slides.length;
 
@@ -253,4 +255,10 @@ dotContainer.addEventListener('click', function (e) {
         moveToSlide(slide);
         activateCurrentDot(slide);
     }
+});
+
+const itemSlider = document.querySelectorAll(".review");
+
+itemSlider.forEach((el) => {
+    el.addEventListener("click", nextSlide);
 });
