@@ -702,6 +702,7 @@ img {
 .review {
     width: 60%;
     position: relative;
+    cursor: pointer;
 }
 
 .review::before {
