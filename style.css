@@ -420,6 +420,8 @@ img {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    column-gap: 2rem;
+    row-gap: 6rem;
     justify-content: center;
     transform: translateY(-3rem);
 }
@@ -670,7 +672,7 @@ img {
 
 .slider__btn {
     position: absolute;
-    top: 40%;
+    top: 50%;
     z-index: 10;
     border: none;
     background: #C8D7B8;
@@ -688,7 +690,6 @@ img {
 }
 
 .slide--next {
-    /*transform: translateX(-50%);*/
     transition: all 0.2s;
 }
 
@@ -697,12 +698,14 @@ img {
 }
 
 .slider__btn--left {
-    left: 6%;
+    left: 7%;
+    bottom: 50%;
     transform: translate(-50%, -50%);
 }
 
 .slider__btn--right {
-    right: 6%;
+    right: 7%;
+    bottom: 50%;
     transform: translate(50%, -50%);
 }
 
@@ -710,7 +713,8 @@ img {
     position: absolute;
     bottom: 5%;
     left: 50%;
-    transform: translateX(-50%);
+    /*top: 100%;*/
+    transform: translate(-50%, -100%);
     display: flex;
 }
 
@@ -724,6 +728,7 @@ img {
     margin-right: 1.75rem;
     cursor: pointer;
     transition: all 0.5s;
+    transform: translateY(-50%);
 }
 
 .dots__dot:last-child {
@@ -752,7 +757,7 @@ img {
     z-index: -1;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 800px) {
     .slider__btn {
         display: none;
     }
@@ -777,11 +782,45 @@ img {
     }
 }
 
+@media screen and (min-device-width: 801px) and (max-device-width: 900px){
+    .dots {
+        /position: absolute;
+        bottom: 10%;
+        left: 50%;
+
+        /*top: 100%;*/
+        transform: translate(-50%, -100%);
+        display: flex;
+    }
+    .slider__btn {
+        display: none;
+    }
+
+    .slider {
+        width: 45rem;
+        height: 50rem;
+    }
+    .slide {
+        width: 45rem;
+        margin: 0 auto;
+        transition: transform 1s;
+    }
+
+    .slide img {
+        width: 45rem;
+        height: 45rem;
+    }
+    .review {
+        width: 45rem;
+        position: relative;
+    }
+}
 /* footer */
 
 .section__sign-up {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     align-content: center;
     background-color: rgb(49, 49, 49);
@@ -792,7 +831,8 @@ img {
 .section__title__sign-up {
     color: #f0f0f0;
     margin: 0;
-    width: 100%;
+    padding: 2rem 0;
+    /*width: 30rem;*/
 
 }
 
@@ -800,17 +840,17 @@ img {
     /*width: 60rem;*/
     font-size: 2.6rem;
     text-align: center;
-    margin-top: 6rem;
-    margin-bottom: 2rem;
+    /*margin-top: 6rem;*/
+    /*margin-bottom: 2rem;*/
 }
 
 @media (max-width: 767px) {
     .section__header__sign-up {
-        width: 30rem;
+        width: 100%;
         font-size: 2.6rem;
         text-align: center;
-        margin-top: 6rem;
-        margin-bottom: 2rem;
+        /*margin-top: 6rem;*/
+        /*margin-bottom: 2rem;*/
     }
 }
 
@@ -819,8 +859,8 @@ img {
         width: 60rem;
         font-size: 2.6rem;
         text-align: center;
-        margin-top: 6rem;
-        margin-bottom: 2rem;
+        /*margin-top: 6rem;*/
+        /*margin-bottom: 2rem;*/
     }
 }
 
