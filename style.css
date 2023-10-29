@@ -392,10 +392,11 @@ img {
 }
 
 .services {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    column-gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 45rem));
+    align-items: center;
+    justify-items: center;
+    column-gap: 4rem;
     row-gap: 6rem;
     justify-content: center;
     transform: translateY(-3rem);
